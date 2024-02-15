@@ -1,0 +1,243 @@
+Reset margins and paddings
+body, html {
+  margin: -8px;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Base styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 72vh; /* Adjusted to fit the viewport height */
+}
+
+.header, .footer {
+  background-color: #0e0d0d;
+  color: white;
+  font-size: 20px;
+  
+  
+}
+
+.header {
+  height: 100px;
+ 
+}
+
+.footer {
+  height: 100px;
+}
+
+.header h1, .footer p {
+  margin: 0;
+}
+
+.navbar, .footer-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul, .footer-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar ul li, .footer-nav ul li {
+  margin-right: 20px;
+}
+
+.navbar ul li a, .footer-nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar ul li a:hover, .footer-nav ul li a:hover {
+  color: #007bff;
+}
+
+.content {
+  flex: 1;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  z-index: 2;
+} */
+
+.title {
+  position: absolute;
+  top: 35%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgb(250, 4, 4);
+  font-size: 80px;
+  font-weight: bold;
+  animation: fadeIn 1s ease-in-out infinite alternate; /* Add animation */
+  z-index: 2;
+}
+
+ 
+
+/* CSS */
+.button-85 {
+  position: absolute;
+  top: 60%;
+  left: 48%;
+  transform: translateX(-50%);
+  padding: 1em 5em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+
+
+
+/* Fluid image */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  .header, .footer {
+    padding: 10px;
+  }
+  
+  .header {
+    height: 60px;
+  }
+  
+  .footer {
+    height: 40px;
+  }
+
+  .navbar ul li, .footer-nav ul li {
+    margin-right: 10px;
+  }
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.heart {
+  color: red;
+  font-size: 1.2em;
+  vertical-align: middle;
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.1); }
+  }
