@@ -22,9 +22,42 @@ This is a simple HTML/CSS/JavaScript project demonstrating a full-page component
 
 ## Technologies Used
 
-- HTML
-- CSS
-- JavaScript
+- HTML: Used for the structure of the web page.
+- CSS: Used for styling the elements and creating animations.
+- JavaScript: Used for handling button clicks and displaying the custom alert box.
+
+## Functions and Properties
+
+### Functions:
+
+1. `showAlert()`: This function is called when the button is clicked. It displays the custom alert box by setting its display style to "block".
+
+2. `closeAlert()`: This function is called when the close button in the custom alert box is clicked. It hides the alert box by setting its display style to "none".
+
+### Properties:
+
+#### CSS Properties:
+
+- `position`, `top`, `left`, `right`, `bottom`: Used for positioning elements on the page.
+- `transform`: Used for applying transformations to elements.
+- `text-align`: Used for aligning text content.
+- `color`, `font-size`: Used for styling text.
+- `z-index`: Used for controlling the stacking order of elements.
+- `background-color`, `padding`, `margin`, `border`, `border-radius`: Used for styling elements.
+- `cursor`: Used for specifying the cursor type.
+
+#### JavaScript Properties:
+
+- `document.getElementById()`: Used for retrieving elements from the DOM.
+- `style.display`: Used for setting the CSS display property of an element.
+- `alert()`: Used for displaying a dialog box with a message.
+
+### Animation:
+
+- `@keyframes`: Used for defining animation keyframes.
+- `animation`: Used for applying animations to elements.
+
+These functions and properties are used to create a responsive and interactive full-page component with a custom alert box and attractive styling.
 
 ## Credits
 
